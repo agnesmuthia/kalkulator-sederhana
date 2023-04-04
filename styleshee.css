@@ -1,49 +1,94 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  background: cyan;
 }
 
-.calculator{
-    text-align: center;
-    margin:0 auto;
-    padding-top: 100px;
-    width: 400px;
+.calculator {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 400px;
 }
 
-.calculator-screen{
-    width: 100%;
-    height: 100px;
-    background-color: #252525;
-    color :white;
-    font-size: 36px;
-    text-align: right;
-    padding: 0 20px;
-    border: none;
+.calculator-screen {
+  width: 100%;
+  height: 100px;
+  background-color: #252525;
+  color: white;
+  font-size: 36px;
+  text-align: right;
+  padding: 0 20px;
+  border: none;
 }
 
-.calculator-keys{
-    width: 100%;
+.calculator-keys {
+  width: 100%;
 }
-.row{
-    display: flex;
+.row {
+  display: flex;
 }
 .row button {
-    background-color: gray;
-    color: white;
-    font-size: 36px;
-    border: 1px solid black;
+  background-color: gray;
+  color: white;
+  font-size: 36px;
+  border: 1px solid black;
+  width: 25%;
+  outline: none;
+  padding: 10px 0;
+}
+.row .all-clear,
+.row .zero-btn {
+  width: 50%;
+}
+.row .operator,
+.row .equal-sign {
+  background-color: pink;
+}
+button:hover {
+  background-color: darkgray;
+}
+.row .operator:hover,
+.row .equal-sign:hover {
+  background-color: darkred;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .layer {
+    flex-direction: column;
+  }
+  .artis {
+    font-size: 10px;
+  }
+  .wrap {
+    width: 300px;
+    margin-right: 0;
+  }
+  .show {
+    font-size: 20px;
+  }
+  .calculator {
+    width: 300px;
+  }
+  button {
+    font-size: 25px;
+    height: 50px;
     width: 25%;
-    outline: none;
-    padding: 10px 0;
-}
-.row .all-clear, .row .zero-btn{
-    width: 50%;
-}
-.row .operator, .row .equal-sign{
-    background-color: orange;
-}
-button:hover{
-    background-color: darkgray;
-}
-.row .operator:hover, .row .equal-sign:hover{
-    background-color: darkorange;
+    margin: 10px 3px;
+    border-radius: 10px;
+  }
+
+  .row {
+    justify-content: space-between;
+  }
+  .number,
+  .operator,
+  .decimal,
+  .equal,
+  .persen,
+  .delete,
+  .all-clear {
+    border-radius: 10px;
+    margin: 10px 3px;
+  }
 }
